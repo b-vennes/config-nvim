@@ -1,0 +1,7 @@
+require('opts')
+require('plugins')
+require('mappings')
+require('cmp-config')
+require('nvim-tree-config')
+require('metals-config')
+require('telescope-config')
