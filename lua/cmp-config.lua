@@ -2,7 +2,7 @@ local cmp = require("cmp")
 cmp.setup({
   sources = {
     { name = "nvim_lsp" },
-    { name = "vsnip" },
+    { name = "vsnip" }
   },
   snippet = {
     expand = function(args)

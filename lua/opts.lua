@@ -1,13 +1,22 @@
-local opts = vim.opt
+local set = vim.opt
  
-opts.autoindent = true
-opts.tabstop = 2
-opts.shiftwidth = 2
-opts.expandtab = true
-opts.number = true
+set.autoindent = true
+set.tabstop = 2
+set.shiftwidth = 2
+set.expandtab = true
+set.number = true
 
-vim.g.mapleader = ","
-vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
+set.termguicolors = true
+set.background = 'dark'
+vim.g.everforest_background = 'medium'
+vim.cmd('colorscheme everforest')
+
+vim.g.mapleader = ','
+vim.opt_global.completeopt = { 'menuone', 'noinsert', 'noselect' }
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.g.OmniSharp_server_use_net6 = 1
+
+vim.g.rainbow_active = 1
