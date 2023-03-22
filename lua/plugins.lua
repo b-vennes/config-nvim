@@ -8,38 +8,35 @@ require("packer").startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'}, { 'nvim-lua/popup.nvim' } }
   }
 
+  use 'neovim/nvim-lspconfig'
+
+  use "williamboman/mason.nvim"
+
   use {
     "scalameta/nvim-metals",
     requires = {
       "nvim-lua/plenary.nvim"
-    },
+    }
   }
 
   use 'preservim/nerdtree'
 
-  use({
+  use {
     "hrsh7th/nvim-cmp",
     requires = {
       { "hrsh7th/cmp-nvim-lsp" },
       { "hrsh7th/cmp-vsnip" },
       { "hrsh7th/vim-vsnip" },
-    },
-  })
-
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-
-  use 'neovim/nvim-lspconfig'
-
-  use 'simrat39/rust-tools.nvim'
+    }
+  }
 
   -- Useful completion sources:
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'hrsh7th/cmp-vsnip'                             
-  use 'hrsh7th/cmp-path'                              
-  use 'hrsh7th/cmp-buffer'                            
-  use 'hrsh7th/vim-vsnip' 
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/vim-vsnip'
 
   use 'softinio/scaladex.nvim'
 
@@ -54,9 +51,30 @@ require("packer").startup(function(use)
     run = function()
         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
         ts_update()
-    end,
+    end
   }
-  
+
   use 'luochen1990/rainbow'
 
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+    config = function()
+      require("toggleterm").setup()
+    end
+  }
+
+  use 'HallerPatrick/py_lsp.nvim'
+
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function ()
+      require"octo".setup()
+    end
+  }
 end)
