@@ -56,13 +56,7 @@ require("packer").startup(function(use)
 
   use 'luochen1990/rainbow'
 
-  use {
-    "akinsho/toggleterm.nvim",
-    tag = "*",
-    config = function()
-      require("toggleterm").setup()
-    end
-  }
+  use 'akinsho/toggleterm.nvim'
 
   use 'HallerPatrick/py_lsp.nvim'
 
@@ -77,4 +71,16 @@ require("packer").startup(function(use)
       require"octo".setup()
     end
   }
+
+  use({
+    "giusgad/pets.nvim",
+    requires = {
+      "giusgad/hologram.nvim",
+      "MunifTanjim/nui.nvim",
+    }
+  })
+
+  use 'zbirenbaum/copilot.lua'
+  use 'zbirenbaum/copilot-cmp'
+
 end)

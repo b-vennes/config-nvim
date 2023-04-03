@@ -9,8 +9,6 @@ metals_config.settings = {
 
 metals_config.init_options.statusBarProvider = "on"
 
-local metals_config = require("metals").bare_config()
-
 -- Autocmd that will actually be in charging of starting the whole thing
 local nvim_metals_group = api.nvim_create_augroup("nvim-metals", { clear = true })
 api.nvim_create_autocmd("FileType", {
