@@ -72,13 +72,13 @@ require("packer").startup(function(use)
     end
   }
 
-  use({
+  use {
     "giusgad/pets.nvim",
     requires = {
       "giusgad/hologram.nvim",
       "MunifTanjim/nui.nvim",
     }
-  })
+  }
 
   use 'zbirenbaum/copilot.lua'
   use 'zbirenbaum/copilot-cmp'
