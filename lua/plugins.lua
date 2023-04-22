@@ -62,7 +62,7 @@ require("packer").startup(function(use)
       "giusgad/hologram.nvim",
       "MunifTanjim/nui.nvim",
     }
-  })
+  }
 
   use 'zbirenbaum/copilot.lua'
   use 'zbirenbaum/copilot-cmp'
