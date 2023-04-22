@@ -15,6 +15,5 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.smithy" },
   callback = function() vim.cmd("setfiletype smithy") end
 })
-lspconfig.smithy_ls.setup {
-  root_dir = lspconfig.util.root_pattern("build.sbt")
-}
+
+lspconfig.smithy_ls.setup {}

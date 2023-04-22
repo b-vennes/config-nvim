@@ -56,22 +56,6 @@ require("packer").startup(function(use)
 
   use 'luochen1990/rainbow'
 
-  use 'akinsho/toggleterm.nvim'
-
-  use 'HallerPatrick/py_lsp.nvim'
-
-  use {
-    'pwntester/octo.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-      'kyazdani42/nvim-web-devicons',
-    },
-    config = function ()
-      require"octo".setup()
-    end
-  }
-
   use({
     "giusgad/pets.nvim",
     requires = {

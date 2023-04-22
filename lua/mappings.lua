@@ -97,15 +97,8 @@ map('n', '<leader>tc', ':tabclose<CR>')
 -- <t>oggle <h>ighlight
 map('n', '<leader>th', ':noh<CR>')
 
--- <c>onsole ops
-map('n', '<leader>cj', ':ToggleTerm direction=float<CR>')
-map('n', '<leader>cl', ':ToggleTerm direction=vertical size=80<CR>')
-map('n', '<leader>cj', ':ToggleTerm direction=horizontal<CR>')
+-- new line below
+map('n', '<leader>o', 'o<ESC>')
 
--- close terminal
-function _G.set_terminal_keymaps()
-  local opts = {buffer = 0}
-  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-end
-
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+-- new line above
+map('n', '<leader>O', 'O<ESC>')

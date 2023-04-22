@@ -18,7 +18,10 @@ cmp.setup({
     -- is no vim docs, but you can't have select = true here _unless_ you are
     -- also using the snippet stuff. So keep in mind that if you remove
     -- snippets you need to remove this select
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<CR>"] = cmp.mapping.confirm {
+      select = false,
+      behavior = cmp.ConfirmBehavior.Replace
+    },
     -- I use tabs... some say you should stick to ins-completion but this is just here as an example
     ["<Tab>"] = function(fallback)
       if cmp.visible() then
