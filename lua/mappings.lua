@@ -102,3 +102,11 @@ map('n', '<leader>o', 'o<ESC>')
 
 -- new line above
 map('n', '<leader>O', 'O<ESC>')
+
+map('n', '<leader>ca', function()
+  vim.lsp.buf.code_action()
+end)
+
+map("n", "<leader>mc", function()
+  require"telescope".extensions.metals.commands()
+end)

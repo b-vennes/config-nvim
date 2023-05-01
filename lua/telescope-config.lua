@@ -1,11 +1,6 @@
 local telescope = require('telescope')
 
-telescope.setup({
-  pickers = {
-    find_files = {
-      -- theme = "dropdown",
-    }
-  }
-})
+telescope.setup {}
 
 telescope.load_extension('scaladex')
+telescope.load_extension('ui-select')

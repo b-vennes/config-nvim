@@ -8,8 +8,8 @@ set.number = true
 
 set.termguicolors = true
 set.background = 'dark'
-vim.g.everforest_background = 'hard'
-vim.cmd('colorscheme everforest')
+-- vim.g.everforest_background = 'hard'
+vim.cmd('colorscheme gruvbox')
 
 vim.g.mapleader = ','
 vim.opt_global.completeopt = { 'menuone', 'noinsert', 'noselect' }

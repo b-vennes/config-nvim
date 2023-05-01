@@ -8,6 +8,7 @@ require("packer").startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'}, { 'nvim-lua/popup.nvim' } }
   }
 
+  use 'neovim/nvim-lsp'
   use 'neovim/nvim-lspconfig'
 
   use "williamboman/mason.nvim"
@@ -41,8 +42,8 @@ require("packer").startup(function(use)
   use 'softinio/scaladex.nvim'
 
   use 'arcticicestudio/nord-vim'
-
   use 'sainnhe/everforest'
+  use 'morhetz/gruvbox'
 
   use 'Omnisharp/omnisharp-vim'
 
@@ -56,7 +57,7 @@ require("packer").startup(function(use)
 
   use 'luochen1990/rainbow'
 
-  use({
+  use {
     "giusgad/pets.nvim",
     requires = {
       "giusgad/hologram.nvim",
@@ -66,5 +67,16 @@ require("packer").startup(function(use)
 
   use 'zbirenbaum/copilot.lua'
   use 'zbirenbaum/copilot-cmp'
+
+  use 'nvim-telescope/telescope-ui-select.nvim'
+
+  -- use 'rmagatti/goto-preview'
+
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
 end)
