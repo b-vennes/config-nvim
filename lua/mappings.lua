@@ -66,8 +66,8 @@ map("n", "<leader>sd", function()
   require('telescope').extensions.scaladex.scaladex.search()
 end)
 
--- commands (aka command palette)
-map("n", "<leader>cp", function()
+-- commands
+map("n", "<leader>lc", function()
   require('telescope.builtin').commands()
 end)
 
@@ -76,11 +76,8 @@ map("n", "<leader>fa", function()
   require('telescope.builtin').live_grep()
 end)
 
--- <e>xplorer <f>ocus
-map('n', '<leader>ef', ':NERDTreeFocus<CR>')
-
--- <e>xplorer <t>oggle
-map('n', '<leader>et', ':NERDTreeToggle<CR>')
+-- <e>xplorer <o>pen
+map('n', '<leader>fb', ':Telescope file_browser<CR>')
 
 -- new tab
 map('n', '<leader>tn', ':tabnew<CR>')
@@ -110,3 +107,5 @@ end)
 map("n", "<leader>mc", function()
   require"telescope".extensions.metals.commands()
 end)
+
+map('n', '<leader>cp', ':Copilot panel<CR>')
