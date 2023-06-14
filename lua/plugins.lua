@@ -20,8 +20,6 @@ require("packer").startup(function(use)
     }
   }
 
-  -- use 'preservim/nerdtree'
-
   use {
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -49,7 +47,7 @@ require("packer").startup(function(use)
   use 'arcticicestudio/nord-vim'
   use 'sainnhe/everforest'
   use 'morhetz/gruvbox'
-  use 'marlun/vim-starwars'
+  use 'enthudave/star_wars.vim'
 
   use 'Omnisharp/omnisharp-vim'
 
@@ -83,5 +81,14 @@ require("packer").startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   }
 end)

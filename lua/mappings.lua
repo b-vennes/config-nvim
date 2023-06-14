@@ -76,8 +76,8 @@ map("n", "<leader>fa", function()
   require('telescope.builtin').live_grep()
 end)
 
--- <e>xplorer <o>pen
-map('n', '<leader>fb', ':Telescope file_browser<CR>')
+-- <f>ile <b>rowser
+map('n', '<leader>fb', ':NeoTreeShowInSplitToggle<CR>')
 
 -- new tab
 map('n', '<leader>tn', ':tabnew<CR>')
