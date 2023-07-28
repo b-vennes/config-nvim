@@ -3,9 +3,12 @@ vim.cmd([[packadd packer.nvim]])
 require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
+  -- this is required by a couple extensions
+  use "nvim-lua/plenary.nvim"
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'}, { 'nvim-lua/popup.nvim' } }
+    requires = { 'nvim-lua/popup.nvim' }
   }
 
   use 'neovim/nvim-lsp'
@@ -13,16 +16,11 @@ require("packer").startup(function(use)
 
   use "williamboman/mason.nvim"
 
-  use {
-    "scalameta/nvim-metals",
-    requires = {
-      "nvim-lua/plenary.nvim"
-    }
-  }
+  use "scalameta/nvim-metals"
 
   use {
     "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    requires = { "nvim-telescope/telescope.nvim" }
   }
 
   use {
@@ -85,10 +83,11 @@ require("packer").startup(function(use)
 
   use {
     "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     requires = {
-      "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
   }
+  use 'navarasu/onedark.nvim'
 end)

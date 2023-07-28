@@ -6,10 +6,12 @@ set.shiftwidth = 2
 set.expandtab = true
 set.number = true
 
-set.termguicolors = true
-set.background = 'dark'
--- vim.g.everforest_background = 'hard'
-vim.cmd('colorscheme star_wars')
+require('onedark').setup {
+  style = 'dark'
+}
+-- set.termguicolors = true
+-- set.background = 'light'
+vim.cmd('colorscheme onedark')
 
 vim.g.mapleader = ','
 vim.opt_global.completeopt = { 'menuone', 'noinsert', 'noselect' }

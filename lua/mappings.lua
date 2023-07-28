@@ -77,7 +77,7 @@ map("n", "<leader>fa", function()
 end)
 
 -- <f>ile <b>rowser
-map('n', '<leader>fb', ':NeoTreeShowInSplitToggle<CR>')
+map('n', '<leader>fb', ':Neotree current toggle<CR>')
 
 -- new tab
 map('n', '<leader>tn', ':tabnew<CR>')
