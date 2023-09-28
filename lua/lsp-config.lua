@@ -9,9 +9,9 @@ lspconfig.jdtls.setup {
 --]]
 lspconfig.rust_analyzer.setup {}
 lspconfig.eslint.setup {}
---
+
 lspconfig.tsserver.setup {}
---
+
 lspconfig.terraformls.setup {}
 
 -- enable smithy file type
@@ -23,3 +23,9 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 lspconfig.rust_analyzer.setup {}
 
 lspconfig.smithy_ls.setup {}
+
+lspconfig.nil_ls.setup {}
+
+lspconfig.hls.setup {
+  filetypes = { 'haskell', 'lhaskell', 'cabal' },
+}

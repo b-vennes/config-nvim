@@ -42,10 +42,7 @@ require("packer").startup(function(use)
 
   use 'softinio/scaladex.nvim'
 
-  use 'arcticicestudio/nord-vim'
-  use 'sainnhe/everforest'
-  use 'morhetz/gruvbox'
-  use 'enthudave/star_wars.vim'
+  use "savq/melange-nvim"
 
   use 'Omnisharp/omnisharp-vim'
 
@@ -55,6 +52,12 @@ require("packer").startup(function(use)
         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
         ts_update()
     end
+  }
+
+  use {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
   }
 
   use 'luochen1990/rainbow'
@@ -72,7 +75,7 @@ require("packer").startup(function(use)
 
   use 'nvim-telescope/telescope-ui-select.nvim'
 
-  -- use 'rmagatti/goto-preview'
+  use 'rmagatti/goto-preview'
 
   use 'lukas-reineke/indent-blankline.nvim'
 
@@ -89,5 +92,4 @@ require("packer").startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
-  use 'navarasu/onedark.nvim'
 end)
