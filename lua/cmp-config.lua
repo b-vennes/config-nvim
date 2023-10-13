@@ -1,11 +1,8 @@
-require('copilot_cmp').setup {}
-
 local cmp = require("cmp")
 cmp.setup({
   sources = {
     { name = "nvim_lsp" },
     { name = "vsnip" },
-    { name = 'copilot' }
   },
   snippet = {
     expand = function(args)

@@ -6,10 +6,7 @@ set.shiftwidth = 2
 set.expandtab = true
 set.number = true
 
-local theme = 'light'
-
 set.termguicolors = true
-set.background = theme
 
 vim.cmd.colorscheme 'melange'
 

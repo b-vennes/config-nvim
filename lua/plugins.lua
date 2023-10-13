@@ -11,6 +11,13 @@ require("packer").startup(function(use)
     requires = { 'nvim-lua/popup.nvim' }
   }
 
+  use {
+    "nvim-tree/nvim-web-devicons",
+    run = function ()
+      require('nvim-web-devicons').setup {}
+    end
+  }
+
   use 'neovim/nvim-lsp'
   use 'neovim/nvim-lspconfig'
 
@@ -70,9 +77,6 @@ require("packer").startup(function(use)
     }
   }
 
-  use 'zbirenbaum/copilot.lua'
-  use 'zbirenbaum/copilot-cmp'
-
   use 'nvim-telescope/telescope-ui-select.nvim'
 
   use 'rmagatti/goto-preview'
@@ -91,5 +95,18 @@ require("packer").startup(function(use)
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
+  }
+
+  use {
+    "ray-x/lsp_signature.nvim",
+  }
+
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
   }
 end)

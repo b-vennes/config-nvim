@@ -2,11 +2,6 @@ local lspconfig = require('lspconfig')
 
 lspconfig.lua_ls.setup {}
 lspconfig.pyright.setup {}
---[[
-lspconfig.jdtls.setup {
-  root_dir = lspconfig.util.root_pattern("build.sbt"),
-}
---]]
 lspconfig.rust_analyzer.setup {}
 lspconfig.eslint.setup {}
 
@@ -29,3 +24,16 @@ lspconfig.nil_ls.setup {}
 lspconfig.hls.setup {
   filetypes = { 'haskell', 'lhaskell', 'cabal' },
 }
+
+local lsp_signature_setup = {
+  on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach({
+      bind = true, -- This is mandatory, otherwise border config won't get registered.
+      handler_opts = {
+        border = "rounded"
+      }
+    }, bufnr)
+  end,
+}
+
+require("lsp_signature").setup(lsp_signature_setup)

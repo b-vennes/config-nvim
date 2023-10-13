@@ -100,12 +100,16 @@ map('n', '<leader>o', 'o<ESC>')
 -- new line above
 map('n', '<leader>O', 'O<ESC>')
 
-map('n', '<leader>ca', function()
-  vim.lsp.buf.code_action()
-end)
-
 map("n", "<leader>mc", function()
-  require"telescope".extensions.metals.commands()
+  require("telescope").extensions.metals.commands()
 end)
 
-map('n', '<leader>cp', ':Copilot panel<CR>')
+map("n", "gD", [[<cmd>lua require"telescope.builtin".lsp_definitions()<CR>]])
+map("n", "gt", [[<cmd>lua require"telescope.builtin".lsp_type_definitions()<CR>]])
+map("n", "gi", [[<cmd>lua require"telescope.builtin".lsp_implementations()<CR>]])
+map("n", "gr", [[<cmd>lua require"telescope.builtin".lsp_references()<CR>]])
+map("n", "gds", [[<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>]])
+map("n", "gws", [[<cmd>lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>]])
+map("n", "<leader>aa", [[<cmd>lua require"telescope.builtin".diagnostics()<CR>]])                 -- all workspace diagnostics
+map("n", "<leader>ae", [[<cmd>lua require"telescope.builtin".diagnostics({severity = "E"})<CR>]]) -- all workspace errors
+map("n", "<leader>aw", [[<cmd>lua require"telescope.builtin".diagnostics({severity = "W"})<CR>]]) -- all workspace errors
