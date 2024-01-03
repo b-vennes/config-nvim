@@ -1,16 +1,7 @@
 require('plugins')
 
+require('setup-plugins/all')
+
 require('opts')
 
-require('telescope-config')
-require('lsp-config')
-require('mason-config')
-require('cmp-config')
-require('nerd-tree-config')
-require('metals-config')
-require('omnisharp-config')
-require('treesitter-config')
-require('pets-config')
-require("octo-config")
-require('lualine-config')
-require('mappings')
+require('keymap')
