@@ -1,7 +1,7 @@
-require('plugins')
+require('plugins').addDependencies()
 
-require('setup-plugins/all')
+require('setup-plugins/all').setupAll()
 
-require('opts')
+require('options').configure()
 
-require('keymap')
+require('keymap').setKeyMap()

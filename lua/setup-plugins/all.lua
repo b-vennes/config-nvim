@@ -12,6 +12,12 @@ local plugins = {
   'treesitter',
 }
 
-for _, plugin in pairs(plugins) do
-  require('setup-plugins/setup-' .. plugin)
+local function setupAll()
+    for _, plugin in pairs(plugins) do
+        require('setup-plugins/setup-' .. plugin)
+    end
 end
+
+return {
+    setupAll = setupAll
+}
