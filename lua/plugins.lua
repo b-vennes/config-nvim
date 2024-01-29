@@ -107,6 +107,18 @@ local function using (use)
   })
 
   use('folke/tokyonight.nvim')
+
+  use({
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+  })
+
+  use({
+      "SmiteshP/nvim-navic",
+      requires = "neovim/nvim-lspconfig"
+  })
+
+  use({ 'jonarrien/telescope-cmdline.nvim' })
 end
 
 require('packer').startup(using)
