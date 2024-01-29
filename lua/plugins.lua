@@ -1,6 +1,6 @@
 vim.cmd([[packadd packer.nvim]])
 
-local function using (use)
+local function dependencies (use)
   use({ 'wbthomason/packer.nvim', opt = true })
 
   -- this is required by a couple extensions
@@ -121,4 +121,10 @@ local function using (use)
   use({ 'jonarrien/telescope-cmdline.nvim' })
 end
 
-require('packer').startup(using)
+local function addDependencies()
+    require('packer').startup(dependencies)
+end
+
+return {
+    addDependencies = addDependencies
+}
