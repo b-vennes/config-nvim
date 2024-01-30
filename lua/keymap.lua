@@ -42,16 +42,20 @@ local function setKeyMap()
     map(leader('ws'), telescope.builtin.lsp_dynamic_workspace_symbols)
 
     map(leader('fb'), ':Triptych<CR>')
+
     map(leader('tn'), ':tabnew<CR>')
     map(leader('tt'), ':tabnext<CR>')
     map(leader('tp'), ':tabprevious<CR>')
     map(leader('tc'), ':tabclose<CR>')
     map(leader('th'), ':noh<CR>')
+
     map(leader('o'), 'o<ESC>')
     map(leader('O'), 'O<ESC>')
+
     map(leader('pr'), ':Octo pr list<CR>')
     map(leader('br'), ':Octo review start<CR>')
     map(leader('er'), ':Octo review submit<CR>')
+    map(leader('dr'), ':Octo pr diff<CR>')
 
     -- toggle diagnostics
     map(leader('dt'), toggle_diagnostics)
