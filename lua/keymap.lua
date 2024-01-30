@@ -20,10 +20,11 @@ local function toggle_diagnostics()
   end
 end
 
--- LSP keymaps
-local lsp = vim.lsp
+local function setKeyMap()
+    local telescope = require('telescope')
+    telescope.builtin = require('telescope.builtin')
 
-function setKeyMap()
+    map('K', vim.lsp.buf.hover)
     map('gD', telescope.builtin.lsp_definitions)
     map('gt', telescope.builtin.lsp_type_definitions)
     map('gi', telescope.builtin.lsp_implementations)
@@ -39,7 +40,6 @@ function setKeyMap()
     map(leader('aw'), function() telescope.builtin.diagnostics({ severity = 'W' }) end)
     map(leader('ds'), telescope.builtin.lsp_document_symbols)
     map(leader('ws'), telescope.builtin.lsp_dynamic_workspace_symbols)
-    -- end Telescope keymaps
 
     map(leader('fb'), ':Neotree current toggle<CR>')
     map(leader('tn'), ':tabnew<CR>')

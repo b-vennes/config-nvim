@@ -10,7 +10,7 @@ local function configure()
     set.number = true
 
     set.termguicolors = true
-    vim.cmd.colorscheme 'tokyonight-night'
+    vim.cmd.colorscheme 'melange'
 
     vim.g.mapleader = ','
     vim.opt_global.completeopt = { 'menuone', 'noinsert', 'noselect' }
