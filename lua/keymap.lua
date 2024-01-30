@@ -41,7 +41,7 @@ local function setKeyMap()
     map(leader('ds'), telescope.builtin.lsp_document_symbols)
     map(leader('ws'), telescope.builtin.lsp_dynamic_workspace_symbols)
 
-    map(leader('fb'), ':Neotree current toggle<CR>')
+    map(leader('fb'), ':Triptych<CR>')
     map(leader('tn'), ':tabnew<CR>')
     map(leader('tt'), ':tabnext<CR>')
     map(leader('tp'), ':tabprevious<CR>')

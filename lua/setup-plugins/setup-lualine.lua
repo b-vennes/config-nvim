@@ -1,19 +1,5 @@
 local navic = require('nvim-navic')
 
-
--- Tab colors are custom for Melange theme.
--- They will need to be changed if the theme changes.
-local custom_colors = {
-  active_tab_color = {
-    fg = "#E49B5D",
-    bg = "#34302C",
-  },
-  inactive_tab_color = {
-    fg = "#ECE1D7",
-    bg = "#34302C"
-  }
-}
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -60,10 +46,6 @@ require('lualine').setup {
         show_modified_status = true,
         symbols = {
           modified = '[+]',  -- Text to show when the file is modified.
-        },
-        tabs_color = {
-          active = custom_colors.active_tab_color,
-          inactive = custom_colors.inactive_tab_color,
         },
       }
     },
