@@ -25,6 +25,8 @@ lspconfig.hls.setup {
   filetypes = { 'haskell', 'lhaskell', 'cabal' },
 }
 
+lspconfig.kotlin_language_server.setup {}
+
 local lsp_signature_setup = {
   on_attach = function(client, bufnr)
     require("lsp_signature").on_attach({

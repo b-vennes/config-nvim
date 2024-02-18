@@ -127,6 +127,11 @@ local function dependencies (use)
             'nvim-tree/nvim-web-devicons',
         }
     })
+
+    -- Themes
+    use({
+        'crispybaccoon/evergarden'
+    })
 end
 
 local function addDependencies()
