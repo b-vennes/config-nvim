@@ -29,6 +29,7 @@ local function setKeyMap()
     map('gt', telescope.builtin.lsp_type_definitions)
     map('gi', telescope.builtin.lsp_implementations)
     map('gr', telescope.builtin.lsp_references)
+    map(leader('ca'), vim.lsp.buf.code_action)
 
     map(leader('ff'), function() telescope.builtin.find_files({ theme = 'dropdown' }) end)
     map(leader('sd'), telescope.extensions.scaladex.scaladex.search)

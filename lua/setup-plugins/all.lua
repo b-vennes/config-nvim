@@ -1,6 +1,7 @@
 local plugins = {
     'alpha',
     'cmp',
+    'dash',
     'lsp',
     'lualine',
     'mason',

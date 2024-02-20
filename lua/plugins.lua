@@ -128,10 +128,16 @@ local function dependencies (use)
         }
     })
 
-    -- Themes
+    use({
+      'mrjones2014/dash.nvim',
+      run = 'make install',
+    })
+
+	-- Themes
     use({
         'crispybaccoon/evergarden'
-    })
+	})
+
 end
 
 local function addDependencies()
