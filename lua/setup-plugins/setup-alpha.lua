@@ -21,7 +21,7 @@ dashboard.section.header.val = {
 
 dashboard.leader = ","
 dashboard.section.buttons.val = {
-  dashboard.button(",fb", " Files", ":Triptych<CR>"),
+  dashboard.button(",fb", " Files", ":Telescope file_browser path=%:p:h select_buffer=true<CR>"),
   dashboard.button(",ff", "󰥨 Find Files", ":Telescope find_files<CR>"),
   dashboard.button(",lg", "󱎸 Live Grep", ":Telescope live_grep<CR>"),
   dashboard.button(",pr", " Pull Requests", ":Octo pr list<CR>"),

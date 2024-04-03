@@ -1,5 +1,8 @@
 require("octo").setup({
-  use_local_fs = true
+  use_local_fs = true,
+  suppress_missing_scope = {
+    project_v2 = true,
+  }
 })
 
 vim.cmd("hi link @text.diff.add DiffAdd") -- used for octo

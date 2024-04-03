@@ -13,7 +13,6 @@ local plugins = {
     'pets',
     'telescope',
     'treesitter',
-    'triptych',
 }
 
 local function setupAll()

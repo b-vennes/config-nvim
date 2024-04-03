@@ -9,7 +9,7 @@ local function configure()
     set.expandtab = true
     set.number = true
 
-    set.termguicolors = true
+    set.termguicolors = false
     vim.cmd.colorscheme 'evergarden'
 
     vim.g.mapleader = ','

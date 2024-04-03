@@ -42,7 +42,7 @@ local function setKeyMap()
     map(leader('ds'), telescope.builtin.lsp_document_symbols)
     map(leader('ws'), telescope.builtin.lsp_dynamic_workspace_symbols)
 
-    map(leader('fb'), ':Triptych<CR>')
+    map(leader('fb'), ':Telescope file_browser path=%:p:h select_buffer=true<CR>')
 
     map(leader('tn'), ':tabnew<CR>')
     map(leader('tt'), ':tabnext<CR>')
@@ -62,7 +62,6 @@ local function setKeyMap()
     map(leader('dt'), toggle_diagnostics)
     map(leader('de'), vim.diagnostic.enable)
 
-    -- move from terminal mode to normal mode
     terminal_map('<ESC>', [[<C-\><C-N>]])
 
     -- create terminal tab

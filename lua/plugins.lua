@@ -1,6 +1,4 @@
-vim.cmd([[packadd packer.nvim]])
-
-local function dependencies (use)
+local function dependencies(use)
     use({ 'wbthomason/packer.nvim', opt = true })
 
     -- this is required by a couple extensions
@@ -8,7 +6,6 @@ local function dependencies (use)
 
     use({
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.0',
         requires = { 'nvim-lua/popup.nvim' }
     })
 
@@ -26,7 +23,7 @@ local function dependencies (use)
 
     use({
         'nvim-telescope/telescope-file-browser.nvim',
-        requires = { 'nvim-telescope/telescope.nvim' }
+        requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
     })
 
     use({
@@ -54,7 +51,9 @@ local function dependencies (use)
 
     use({
         'nvim-treesitter/nvim-treesitter',
-        run = require('nvim-treesitter.install').update({ with_sync = true })
+        run = function()
+            require('nvim-treesitter.install').update({ with_sync = true })
+        end
     })
 
     use({
@@ -121,26 +120,18 @@ local function dependencies (use)
     use({ 'jonarrien/telescope-cmdline.nvim' })
 
     use({
-        'simonmclean/triptych.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'nvim-tree/nvim-web-devicons',
-        }
-    })
-
-    use({
       'mrjones2014/dash.nvim',
       run = 'make install',
     })
 
-	-- Themes
+    -- Themes
     use({
         'crispybaccoon/evergarden'
-	})
-
+    })
 end
 
 local function addDependencies()
+    vim.cmd [[packadd packer.nvim]]
     require('packer').startup(dependencies)
 end
 
