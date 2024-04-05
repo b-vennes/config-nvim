@@ -124,6 +124,8 @@ local function dependencies(use)
       run = 'make install',
     })
 
+    use('mfussenegger/nvim-jdtls')
+
     -- Themes
     use({
         'crispybaccoon/evergarden'
