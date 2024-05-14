@@ -36,7 +36,7 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
-  winbar = {
+  tabline = {
     lualine_c = {
       {
         function()
@@ -52,7 +52,7 @@ require('lualine').setup {
       }
     }
   },
-  tabline = {
+  winbar = {
     lualine_a = {
       {
         'tabs',
