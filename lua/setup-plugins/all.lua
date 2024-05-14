@@ -7,7 +7,7 @@ local plugins = {
     'mason',
     'metals',
     'navic',
-    'nerd-tree',
+    'neo-tree',
     'octo',
     'omnisharp',
     'pets',

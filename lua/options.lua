@@ -10,7 +10,7 @@ local function configure()
     set.number = true
 
     set.termguicolors = false
-    vim.cmd.colorscheme 'evergarden'
+    vim.cmd.colorscheme 'catppuccin'
 
     vim.g.mapleader = ','
     vim.opt_global.completeopt = { 'menuone', 'noinsert', 'noselect' }

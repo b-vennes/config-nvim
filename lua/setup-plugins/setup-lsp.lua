@@ -27,6 +27,9 @@ lspconfig.hls.setup {
 
 lspconfig.kotlin_language_server.setup {}
 
+lspconfig.cmake.setup {}
+lspconfig.clangd.setup {}
+
 local lsp_signature_setup = {
   on_attach = function(client, bufnr)
     require("lsp_signature").on_attach({

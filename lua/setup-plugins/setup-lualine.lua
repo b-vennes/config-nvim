@@ -36,6 +36,22 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
+  winbar = {
+    lualine_c = {
+      {
+        function()
+          return navic.get_location()
+        end,
+        cond = function()
+          return navic.is_available()
+        end,
+        max_length = vim.o.columns,
+        tabs_color = {
+          active = 'lualine_{section}_inactive'
+        }
+      }
+    }
+  },
   tabline = {
     lualine_a = {
       {
@@ -47,20 +63,10 @@ require('lualine').setup {
         symbols = {
           modified = '[+]',  -- Text to show when the file is modified.
         },
+        max_length = vim.o.columns
       }
     },
-    lualine_c = {
-      {
-        function()
-          return navic.get_location()
-        end,
-        cond = function()
-          return navic.is_available()
-        end,
-      }
-    }
   },
-  winbar = {},
   inactive_winbar = {},
   extensions = {}
 }

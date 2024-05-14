@@ -30,6 +30,7 @@ local function setKeyMap()
     map('gi', telescope.builtin.lsp_implementations)
     map('gr', telescope.builtin.lsp_references)
     map(leader('ca'), vim.lsp.buf.code_action)
+    map(leader('ss'), function () require('lsp_signature').toggle_float_win() end)
 
     map(leader('ff'), function() telescope.builtin.find_files({ theme = 'dropdown' }) end)
     map(leader('sd'), telescope.extensions.scaladex.scaladex.search)
@@ -42,7 +43,7 @@ local function setKeyMap()
     map(leader('ds'), telescope.builtin.lsp_document_symbols)
     map(leader('ws'), telescope.builtin.lsp_dynamic_workspace_symbols)
 
-    map(leader('fb'), ':Telescope file_browser path=%:p:h select_buffer=true<CR>')
+    map(leader('fb'), ':Neotree position=current<CR>')
 
     map(leader('tn'), ':tabnew<CR>')
     map(leader('tt'), ':tabnext<CR>')
